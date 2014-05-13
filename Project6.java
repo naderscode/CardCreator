@@ -299,37 +299,7 @@ public void actionPerformed(ActionEvent e)
 			//jd.setSize(640,460);
 			jd.show();
 
-			//custcolor = JColorChooser.showDialog(Project6.this,"Choose a Matt Color", custcolor);
-
-			//if (custcolor==null)
-		//	{
-		//		custcolor = Color.lightGray;
-		//	}
-		//	jd.setBackground(custcolor);
-				/*if(fontSelected == false)
-					JOptionPane.showMessageDialog(null, "Choose Font Size", "alert", JOptionPane.ERROR_MESSAGE);
-
-			if (color==null)
-		color = Color.lightGray;
-			//actionPerformed continued
-
-			// now, create an internal frame to show the sample card in
-         JInternalFrame frame = new JInternalFrame("Internal Frame", true, true, true, true );
-			// attach panel to internal frame content pane
-		   Container container = frame.getContentPane();
-
-		   MyJPanel panel = new MyJPanel(index,color,sayindex,size,sayings,cardpics);
-		   container.add( panel, BorderLayout.CENTER );
-
-		   // set size internal frame to size of its contents
-		   frame.pack();
-
-		   // attach internal frame to desktop and show it
-		   theDesktop.add( frame );
-		   frame.setVisible( true );
-      } //end if button clicked
-
-*/
+			
 			}//else
 		}
 
@@ -419,14 +389,13 @@ class DeskTopJDialog extends JDialog implements ActionListener
           if (event.getSource() == clrBtn)
           {
 
-			  //show a JColorChooser
-				color = JColorChooser.showDialog(null,"Choose a color", color);
-				if (color==null)
-				{
-					color = Color.lightGray;
-				}
-
-				// now, create an internal frame to show the sample card in
+		  //show a JColorChooser
+		color = JColorChooser.showDialog(null,"Choose a color", color);
+		if (color==null)
+		{
+			color = Color.lightGray;
+		}
+			// now, create an internal frame to show the sample card in
 			    JInternalFrame frame = new JInternalFrame("Internal Frame", true, true, true, true );
 				// attach panel to internal frame content pane
 			   Container container = frame.getContentPane();
@@ -441,21 +410,21 @@ class DeskTopJDialog extends JDialog implements ActionListener
 			   theDesktop.add( frame );
 			   frame.setVisible( true );
 				//frame.setSize(640,480);
-			}
+		}
 	} //end actionPerformed
 
 }//jdial
 
 class MyJPanel extends JPanel
 {
-		//globally declare local names for each parameter and any other local variables you want
-   private int index, size;
-   private int[] sayindex;
-   String[] sayings;
-   String[] cardpics2;
-   private ImageIcon imageIcon;
-   private Color color;
-   Graphics g = getGraphics();
+	  //globally declare local names for each parameter and any other local variables you want
+	private int index, size;
+	private int[] sayindex;
+	String[] sayings;
+	String[] cardpics2;
+	private ImageIcon imageIcon;
+	private Color color;
+	Graphics g = getGraphics();
 
 //write the constructor
   public MyJPanel(int index, Color color,int[]sayindex,int size, String[]sayings, String[]cardpics2)
